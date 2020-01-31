@@ -1,0 +1,147 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NhospSvcCapacity"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NhospSvcCapacity</font></h1>
+<b>Description: </b>Facility capacity by hospital service.
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscWID.html">hscWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscWCT.html">hscWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscWUT.html">hscWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscWUU.html">hscWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfHospSvcCapacity:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscHsvWID.html">hscHsvWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscDtm.html">hscDtm</a>
+</p></td>
+<td><p align="left">date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscQuota.html">hscQuota</a>
+</p></td>
+<td><p align="left">quota</p></td>
+<td><p align="left">numeric (11.4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscClosedBeds.html">hscClosedBeds</a>
+</p></td>
+<td><p align="left">closed beds</p></td>
+<td><p align="left">numeric(11,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscClosedBedComments.html">hscClosedBedComments</a>
+</p></td>
+<td><p align="left">closed bed comment</p></td>
+<td><p align="left">varchar(75)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscStsCd.html">hscStsCd</a>
+</p></td>
+<td><p align="left">record status code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhospSvcCapacity_hscRptCampus.html">hscRptCampus</a>
+</p></td>
+<td><p align="left">reporting Campus</p></td>
+<td><p align="left">CodeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

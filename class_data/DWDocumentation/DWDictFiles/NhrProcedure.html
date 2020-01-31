@@ -1,0 +1,381 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NhrProcedure"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NhrProcedure</font></h1>
+<b>Description: </b>Health records abstracts - Procedure information
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcWID.html">hprcWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcWCT.html">hprcWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcWUT.html">hprcWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcWUU.html">hprcWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcHraEncWID.html">hprcHraEncWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key. This identifies the encounter abstract that this record belongs to. It provides the link to the NhrAbstract and Nencounter tables.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcLineNum.html">hprcLineNum</a>
+</p></td>
+<td><p align="left">Sequential number assigned to the procedures within a discharge abstract.</p></td>
+<td><p align="left">numeric(3,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcEpisodeNum.html">hprcEpisodeNum</a>
+</p></td>
+<td><p align="left">N/A</p></td>
+<td><p align="left">numeric(3,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcDtm.html">hprcDtm</a>
+</p></td>
+<td><p align="left">The date and time of the procedure. Although the column can accommodate a time component, only the date is included at time of writing. See start and end time below.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcType.html">hprcType</a>
+</p></td>
+<td><p align="left">Procedure Type</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPRTY(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcCd.html">hprcCd</a>
+</p></td>
+<td><p align="left">Procedure Code using the nomenclature in effect. There has been a progression from ICD9 to ICD9CM to ICD10 whidh will likely continue.</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPROC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcSuffix.html">hprcSuffix</a>
+</p></td>
+<td><p align="left">Procedure suffix.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPRSF(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcSts.html">hprcSts</a>
+</p></td>
+<td><p align="left">Procedure status. Started with the advent of ICD10.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcLocation.html">hprcLocation</a>
+</p></td>
+<td><p align="left">Procedure location. Started with the advent of ICD10.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcExtent.html">hprcExtent</a>
+</p></td>
+<td><p align="left">Procedure extent. Started with the advent of ICD10.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcSection.html">hprcSection</a>
+</p></td>
+<td><p align="left">Procedure section.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcAnatomySite.html">hprcAnatomySite</a>
+</p></td>
+<td><p align="left">Procedure anatomy / site.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcIntervention.html">hprcIntervention</a>
+</p></td>
+<td><p align="left">Procedure intervention.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcApproachTechnique.html">hprcApproachTechnique</a>
+</p></td>
+<td><p align="left">Procedure approach / technique.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcDeviceUsed.html">hprcDeviceUsed</a>
+</p></td>
+<td><p align="left">Procedure device used.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcTissueUsed.html">hprcTissueUsed</a>
+</p></td>
+<td><p align="left">Procedure tissue used.  Started with the advent of ICD10. This is a division of the procedure code.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcProWID.html">hprcProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key. This identifies the provider or doctor associated with the procedure.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcProNum.html">hprcProNum</a>
+</p></td>
+<td><p align="left">This is the actual doctor code maintained in Med2020, not the htrProWID after lookup in Nprovider</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcProSvc.html">hprcProSvc</a>
+</p></td>
+<td><p align="left">The service that the provider associated with this procedure is associated to.</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPHSR(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcProType.html">hprcProType</a>
+</p></td>
+<td><p align="left">Provider type.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRSURT(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcTissueCd.html">hprcTissueCd</a>
+</p></td>
+<td><p align="left">Tissue code.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRTSSU(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcStartTime.html">hprcStartTime</a>
+</p></td>
+<td><p align="left">Procedure start time. This column is implemented as a date/time field, only the time component is relevant. Procedures not done in OR will generally not have start time recorded.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcEndTime.html">hprcEndTime</a>
+</p></td>
+<td><p align="left">Procedure end time. This column is implemented as a date/time field, only the time component is relevant. Procedures not done in OR will generally not have start time recorded.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcMinutes.html">hprcMinutes</a>
+</p></td>
+<td><p align="left">Procedure duration in minutes.</p></td>
+<td><p align="left">numeric(3,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcOperatingRoomNum.html">hprcOperatingRoomNum</a>
+</p></td>
+<td><p align="left">Operating room number.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRORSU</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcAnaesthetistProWID.html">hprcAnaesthetistProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key. This identifies the provider or doctor associated with the procedure who administered the anaesthetic.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcAnaesthetistProNum.html">hprcAnaesthetistProNum</a>
+</p></td>
+<td><p align="left">This is the actual doctor code maintained in Med2020, not the htrProWID after lookup in Nprovider</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcAnaestheticTechnique.html">hprcAnaestheticTechnique</a>
+</p></td>
+<td><p align="left">The anaesthetic technique used for the procedure.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRANTC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcDayOfWeek.html">hprcDayOfWeek</a>
+</p></td>
+<td><p align="left">The day of the week that the procedure was done</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcCat.html">hprcCat</a>
+</p></td>
+<td><p align="left">Procedure category</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcClass.html">hprcClass</a>
+</p></td>
+<td><p align="left">Procedure class</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcInstitution.html">hprcInstitution</a>
+</p></td>
+<td><p align="left">Institution number where the procedure was done.</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRINST(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProcedure_hprcUnplannedVisitToOR.html">hprcUnplannedVisitToOR</a>
+</p></td>
+<td><p align="left">Indicates if the procedure was an unplanned visit to the OR.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

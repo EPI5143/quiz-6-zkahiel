@@ -1,0 +1,237 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NphmService"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NphmService</font></h1>
+<b>Description: </b>Pharmacy specific information regarding drugs received by patients during encounters
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmSvcWID.html">phmSvcWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmWCT.html">phmWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmWUT.html">phmWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmWUU.html">phmWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmOrderDesc.html">phmOrderDesc</a>
+</p></td>
+<td><p align="left">Brand Name/ Ingredient for IV</p></td>
+<td><p align="left">varchar(35)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmFreq.html">phmFreq</a>
+</p></td>
+<td><p align="left">frequency of administration of the medication</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmRoute.html">phmRoute</a>
+</p></td>
+<td><p align="left">route of admin for the medication</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmStartDtm.html">phmStartDtm</a>
+</p></td>
+<td><p align="left">start date/time</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmEndDtm.html">phmEndDtm</a>
+</p></td>
+<td><p align="left">Admin stop Date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmStsCd.html">phmStsCd</a>
+</p></td>
+<td><p align="left">status</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">phmStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDispensedFrom.html">phmDispensedFrom</a>
+</p></td>
+<td><p align="left">Where the drug was dispensed from</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">drugLocCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDrugSts.html">phmDrugSts</a>
+</p></td>
+<td><p align="left">Drug status (e.g. formulary or non-formulary)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">drugStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmStrengthDesc.html">phmStrengthDesc</a>
+</p></td>
+<td><p align="left">strength description</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDosageForm.html">phmDosageForm</a>
+</p></td>
+<td><p align="left">Dosage form (e.g. tablet)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDiscontinuedReason.html">phmDiscontinuedReason</a>
+</p></td>
+<td><p align="left">The reason the order was discontinued</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDirection1.html">phmDirection1</a>
+</p></td>
+<td><p align="left">The first line of directions</p></td>
+<td><p align="left">varchar(35)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDirection2.html">phmDirection2</a>
+</p></td>
+<td><p align="left">The second line of directions</p></td>
+<td><p align="left">varchar(35)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmDirection3.html">phmDirection3</a>
+</p></td>
+<td><p align="left">The third line of directions</p></td>
+<td><p align="left">varchar(35)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmBagRate.html">phmBagRate</a>
+</p></td>
+<td><p align="left">rate (only for IVs)</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmBagRunIn.html">phmBagRunIn</a>
+</p></td>
+<td><p align="left">Run-in time(only for IVs)</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NphmService_phmBagRunInUnitCd.html">phmBagRunInUnitCd</a>
+</p></td>
+<td><p align="left">bag run in unit code</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

@@ -1,0 +1,291 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NService"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NService</font></h1>
+<b>Description: </b>Generic information regarding services received by patients during encounters
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcWID.html">svcWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcWCT.html">svcWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcWUT.html">svcWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcWUU.html">svcWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcStmWID.html">svcStmWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcEncWID.html">svcEncWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcTableCd.html">svcTableCd</a>
+</p></td>
+<td><p align="left">type of service</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">svcTableCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOrderedDtm.html">svcOrderedDtm</a>
+</p></td>
+<td><p align="left">Ordered Date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOrderedBy.html">svcOrderedBy</a>
+</p></td>
+<td><p align="left">Who ordered the service.</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcPriorityCd.html">svcPriorityCd</a>
+</p></td>
+<td><p align="left">Priority</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">priorityCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcPerformedDtm.html">svcPerformedDtm</a>
+</p></td>
+<td><p align="left">Date and time when service was performed</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcPerformedBy.html">svcPerformedBy</a>
+</p></td>
+<td><p align="left">The person who performed the service.</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcVerifiedDtm.html">svcVerifiedDtm</a>
+</p></td>
+<td><p align="left">Date and time of service result verification</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcVerifiedBy.html">svcVerifiedBy</a>
+</p></td>
+<td><p align="left">The person who verified that the service was entered correctly into the source system.</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcCancelledDtm.html">svcCancelledDtm</a>
+</p></td>
+<td><p align="left">Date and time of service cancelation</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcCancelledBy.html">svcCancelledBy</a>
+</p></td>
+<td><p align="left">Who cancelled the service.</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcPlacerId.html">svcPlacerId</a>
+</p></td>
+<td><p align="left">A unique number identifying the order in the system where the order was placed.</p></td>
+<td><p align="left">varchar(80)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcPlacerAppCd.html">svcPlacerAppCd</a>
+</p></td>
+<td><p align="left">The application code where the order was placed.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcFillerId.html">svcFillerId</a>
+</p></td>
+<td><p align="left">A unique number identifying the order in the system where it was filled.</p></td>
+<td><p align="left">varchar(80)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcFillerAppCd.html">svcFillerAppCd</a>
+</p></td>
+<td><p align="left">The application code where the order was filled.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcAccessionNum.html">svcAccessionNum</a>
+</p></td>
+<td><p align="left">Accession#</p></td>
+<td><p align="left">varchar(60)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOacisSID.html">svcOacisSID</a>
+</p></td>
+<td><p align="left"> service identifier, internal Oacis key</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOacisPID.html">svcOacisPID</a>
+</p></td>
+<td><p align="left">patient identifier, internal Oacis key</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOacisTID.html">svcOacisTID</a>
+</p></td>
+<td><p align="left">template identifier, internal Oacis key</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcOrderedByProWID.html">svcOrderedByProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">proCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcCampusCd.html">svcCampusCd</a>
+</p></td>
+<td><p align="left">campus code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">campusCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NService_svcBkFillerAppCdFillerId.html">svcBkFillerAppCdFillerId</a>
+</p></td>
+<td><p align="left">N/A</p></td>
+<td><p align="left">varchar(120)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

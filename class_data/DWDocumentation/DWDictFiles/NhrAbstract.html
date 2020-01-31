@@ -1,0 +1,1605 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NhrAbstract"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NhrAbstract</font></h1>
+<b>Description: </b>Health records abstracts - General abstract information
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEncWID.html">hraEncWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key. This identifies the encounter that this record belongs to. It provides the link to the Nencounter table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraWCT.html">hraWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraWUT.html">hraWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraWUU.html">hraWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEncNum.html">hraEncNum</a>
+</p></td>
+<td><p align="left">Encounter number as assigned in Health Records. Should be the same as the SMS Encounter Number in the Encounter table.</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAbstractRecordKey.html">hraAbstractRecordKey</a>
+</p></td>
+<td><p align="left">CIHI assigned key value for the abstract</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCaseType.html">hraCaseType</a>
+</p></td>
+<td><p align="left">The type of case for this abstract.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRCSET(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEncSts.html">hraEncSts</a>
+</p></td>
+<td><p align="left">The encounter status.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAbstractType.html">hraAbstractType</a>
+</p></td>
+<td><p align="left">The type of abstract.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAbstractSts.html">hraAbstractSts</a>
+</p></td>
+<td><p align="left">The abstract status</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRABST(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAbstractPageNum.html">hraAbstractPageNum</a>
+</p></td>
+<td><p align="left">Page number. This is always zero, as this is the only page number extracted from Health Records.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraInstitutionProv.html">hraInstitutionProv</a>
+</p></td>
+<td><p align="left">The province responsible for the abstract. Always Ontario = 5. (CIHI Group 03 Field 05)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraInstitutionNum.html">hraInstitutionNum</a>
+</p></td>
+<td><p align="left">Each campus of TOH and each abstract type has its own institution number. (CIHI Group 01 Field 01)</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRINST</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHmriBatchYear.html">hraHmriBatchYear</a>
+</p></td>
+<td><p align="left">CIHI Specific Information. (CIHI Group 01 Field 03)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHmriBatchPeriod.html">hraHmriBatchPeriod</a>
+</p></td>
+<td><p align="left">CIHI Specific Information (CIHI Group 01 Field 04)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHmriBatchNum.html">hraHmriBatchNum</a>
+</p></td>
+<td><p align="left">CIHI Specific Information. (CIHI Group 01 Field 05)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHmriAbstractNum.html">hraHmriAbstractNum</a>
+</p></td>
+<td><p align="left">(CIHI Group 01 Field 06)</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHmriRecordId.html">hraHmriRecordId</a>
+</p></td>
+<td><p align="left">CIHI Specific Information.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraChartNumPrefix.html">hraChartNumPrefix</a>
+</p></td>
+<td><p align="left">Prefix to the chart number. Not generally used.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraChartNum.html">hraChartNum</a>
+</p></td>
+<td><p align="left">Chart Number is the Medical Record Number or the unique identifier for the patient within the institution. (CIHI Group 01 Field 09)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRegisterNum.html">hraRegisterNum</a>
+</p></td>
+<td><p align="left">Generally characters 7 through 12 of the Encounter number, used by CIHI (CIHI Group 01 Field 10)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMotherChartNum.html">hraMotherChartNum</a>
+</p></td>
+<td><p align="left">For newborns, this is the mother's Chart Number or Medical Record Number (CIHI Group 01 Field 12)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraLos.html">hraLos</a>
+</p></td>
+<td><p align="left">Length Of Stay (CIHI Group 02 Field 02)</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHealthNum.html">hraHealthNum</a>
+</p></td>
+<td><p align="left">Usually the Ontario Provincial Health Number (CIHI Group 03 Field 01)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPostalCd.html">hraPostalCd</a>
+</p></td>
+<td><p align="left">Postal Code (CIHI Group 03 Field 02)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraResidenceCd.html">hraResidenceCd</a>
+</p></td>
+<td><p align="left">Residence Code (CIHI Group 03 Field 03)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRRSDN(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraGenderCd.html">hraGenderCd</a>
+</p></td>
+<td><p align="left">Gender Code (CIHI Group 03 Field 04)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRSEX(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAgeUnknownCd.html">hraAgeUnknownCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient's age is unknown (CIHI Group 03 Field 09)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBirthDtm.html">hraBirthDtm</a>
+</p></td>
+<td><p align="left">Patient Birth Date (CIHI Group 03 Field 08)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAdmDtm.html">hraAdmDtm</a>
+</p></td>
+<td><p align="left">Admit date / time. (CIHI Group 04 Field 01 & 02)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraTransferredFromInstitution.html">hraTransferredFromInstitution</a>
+</p></td>
+<td><p align="left">Institution the patient was transferred from (CIHI Group 04 Field 04)</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRINST(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAdmCatCd.html">hraAdmCatCd</a>
+</p></td>
+<td><p align="left">Admit Category Code (CIHI Group 04 Field 05)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRADCT(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraReadmCd.html">hraReadmCd</a>
+</p></td>
+<td><p align="left">Re-admission Code (CIHI Group 04 Field 08)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRRADM(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEntryCd.html">hraEntryCd</a>
+</p></td>
+<td><p align="left">Entry Code (CIHI Group 04 Field 06)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRENTR(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAdmByAmbCd.html">hraAdmByAmbCd</a>
+</p></td>
+<td><p align="left">Admit by ambulance Code (CIHI Group 04 Field 07)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRAMBU(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDschDtm.html">hraDschDtm</a>
+</p></td>
+<td><p align="left">Discharge date / time. (CIHI Group 05 Field 01 & 02)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraTransferredToInstitution.html">hraTransferredToInstitution</a>
+</p></td>
+<td><p align="left">Transferred to institution. (CIHI Group 05 Field 04)</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRINST(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDateReadyToBeDsch.html">hraDateReadyToBeDsch</a>
+</p></td>
+<td><p align="left">Date / Time the patient was ready to be discharged</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraExitCd.html">hraExitCd</a>
+</p></td>
+<td><p align="left">Exit Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRDISP(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAutopsyCd.html">hraAutopsyCd</a>
+</p></td>
+<td><p align="left">Autopsy Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCoronerCaseCd.html">hraCoronerCaseCd</a>
+</p></td>
+<td><p align="left">Coroner Case Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOrDeathCd.html">hraOrDeathCd</a>
+</p></td>
+<td><p align="left">OR Death Code (CIHI Group 11 Field 16)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraExpiredLessThan48HourAdm.html">hraExpiredLessThan48HourAdm</a>
+</p></td>
+<td><p align="left">Expired less than 48 hours after admission.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraTraumaDeathCd.html">hraTraumaDeathCd</a>
+</p></td>
+<td><p align="left">Trauma death code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPregnancyDeathCd.html">hraPregnancyDeathCd</a>
+</p></td>
+<td><p align="left">Pregnancy death code.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOtherDeathCd.html">hraOtherDeathCd</a>
+</p></td>
+<td><p align="left">Other Death Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAbstractOverflowCd.html">hraAbstractOverflowCd</a>
+</p></td>
+<td><p align="left">Indicates if the Abstract has overflowed. In Health, there are limited number of diagnoses, procedures, doctors, transfers which can be captured. This indicates if one of these is incomplete, and if so, which one.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HROVFL(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPatWeight.html">hraPatWeight</a>
+</p></td>
+<td><p align="left">Patient Weight (CIHI Group 07 Field 03)</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPatSvc.html">hraPatSvc</a>
+</p></td>
+<td><p align="left">Main patient service. (CIHI Group 07 Field 01)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRMSVC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPatSubSvc.html">hraPatSubSvc</a>
+</p></td>
+<td><p align="left">Main Patient Sub Service (CIHI Group 07 Field 02)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRMSUB(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPhysioTherapyCd.html">hraPhysioTherapyCd</a>
+</p></td>
+<td><p align="left">Physio therapy code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOccupationalTherapyCd.html">hraOccupationalTherapyCd</a>
+</p></td>
+<td><p align="left">Occupational Therapy Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraSpeechTherapyCd.html">hraSpeechTherapyCd</a>
+</p></td>
+<td><p align="left">Speech Therapy Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRespiratoryTherapyCd.html">hraRespiratoryTherapyCd</a>
+</p></td>
+<td><p align="left">Respiratory Therapy Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOptionalTherapy1Cd.html">hraOptionalTherapy1Cd</a>
+</p></td>
+<td><p align="left">Optional Therapy Code 1</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOptionalTherapy2Cd.html">hraOptionalTherapy2Cd</a>
+</p></td>
+<td><p align="left">Optional Therapy Code 2</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption1.html">hraBasicOption1</a>
+</p></td>
+<td><p align="left">Basic option 1.  (CIHI Group 14 Field 01)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption2.html">hraBasicOption2</a>
+</p></td>
+<td><p align="left">Basic option 2. (CIHI Group 14 Field 02)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption3.html">hraBasicOption3</a>
+</p></td>
+<td><p align="left">Basic option 3. (CIHI Group 14 Field 03)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption4.html">hraBasicOption4</a>
+</p></td>
+<td><p align="left">Basic option 4. (CIHI Group 14 Field 04)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption5.html">hraBasicOption5</a>
+</p></td>
+<td><p align="left">Basic option 5.  (CIHI Group 14 Field 05)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption6.html">hraBasicOption6</a>
+</p></td>
+<td><p align="left">Basic option 6.  (CIHI Group 14 Field 06)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption7.html">hraBasicOption7</a>
+</p></td>
+<td><p align="left">Basic option 7. (CIHI Group 14 Field 07)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption8.html">hraBasicOption8</a>
+</p></td>
+<td><p align="left">Basic option 8. (CIHI Group 14 Field 08)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption9.html">hraBasicOption9</a>
+</p></td>
+<td><p align="left">Basic option 9.  (CIHI Group 14 Field 09)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption10.html">hraBasicOption10</a>
+</p></td>
+<td><p align="left">Basic option 10. (CIHI Group 14 Field 10)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption11.html">hraBasicOption11</a>
+</p></td>
+<td><p align="left">Basic option 11. (CIHI Group 14 Field 11)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption12.html">hraBasicOption12</a>
+</p></td>
+<td><p align="left">Basic option 12. (CIHI Group 14 Field 12)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption13.html">hraBasicOption13</a>
+</p></td>
+<td><p align="left">Basic option 13. (CIHI Group 14 Field 13)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption14.html">hraBasicOption14</a>
+</p></td>
+<td><p align="left">Basic option 14. (CIHI Group 14 Field 14)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption15.html">hraBasicOption15</a>
+</p></td>
+<td><p align="left">Basic option 15. (CIHI Group 14 Field 15)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption16.html">hraBasicOption16</a>
+</p></td>
+<td><p align="left">Basic option 16. (CIHI Group 14 Field 16)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption17.html">hraBasicOption17</a>
+</p></td>
+<td><p align="left">Basic option 17. (CIHI Group 14 Field 17)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption18.html">hraBasicOption18</a>
+</p></td>
+<td><p align="left">Basic option 18. (CIHI Group 14 Field 18)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBasicOption19.html">hraBasicOption19</a>
+</p></td>
+<td><p align="left">Basic option 19.  (CIHI Group 14 Field 19)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDschPlanningCd.html">hraDschPlanningCd</a>
+</p></td>
+<td><p align="left">Discharge planning code.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraSocialSvcCd.html">hraSocialSvcCd</a>
+</p></td>
+<td><p align="left">Social Service code.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPreAdmWorkupCd.html">hraPreAdmWorkupCd</a>
+</p></td>
+<td><p align="left">Pre-admit workup Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDeathInSpecialUnitCd.html">hraDeathInSpecialUnitCd</a>
+</p></td>
+<td><p align="left">Death in special care unit code. (CIHI Group 13 Field 01)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRDTSC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMaritalStsCd.html">hraMaritalStsCd</a>
+</p></td>
+<td><p align="left">Marital status code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRMSTS(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraSourceOfReferralCd.html">hraSourceOfReferralCd</a>
+</p></td>
+<td><p align="left">Source of referral code.  (CIHI Group 15 Field 02)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMethodOfAdm.html">hraMethodOfAdm</a>
+</p></td>
+<td><p align="left">Method of admit. (CIHI Group 15 Field 03)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraChangeInLegalStsCd.html">hraChangeInLegalStsCd</a>
+</p></td>
+<td><p align="left">Change in legal status code. (CIHI Group 15 Field 04)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAwolCd.html">hraAwolCd</a>
+</p></td>
+<td><p align="left">Away without official leave code. (CIHI Group 15 Field 05)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraSuicideDeathCd.html">hraSuicideDeathCd</a>
+</p></td>
+<td><p align="left">Suicide death code. (CIHI Group 15 Field 06)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPrevPsychiatricAdmCd.html">hraPrevPsychiatricAdmCd</a>
+</p></td>
+<td><p align="left">Previous psychiatric admit code. (CIHI Group 15 Field 07)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraReferredToCd.html">hraReferredToCd</a>
+</p></td>
+<td><p align="left">Referred to code. (CIHI Group 15 Field 08)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEctTreatmentPerformedCd.html">hraEctTreatmentPerformedCd</a>
+</p></td>
+<td><p align="left">ECT Treatments performed code. (CIHI Group 15 Field 09)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumberOfEctTreatments.html">hraNumberOfEctTreatments</a>
+</p></td>
+<td><p align="left">Number of ECT treatments.  (CIHI Group 15 Field 10)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEducationLevelCd.html">hraEducationLevelCd</a>
+</p></td>
+<td><p align="left">Education level code. (CIHI Group 15 Field 12)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraEmploymentStsCd.html">hraEmploymentStsCd</a>
+</p></td>
+<td><p align="left">Employment Status (CIHI Group 15 Field 13)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraFinancialStsCd.html">hraFinancialStsCd</a>
+</p></td>
+<td><p align="left">Financial Status Code (CIHI Group 15 Field 14)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMccCd.html">hraMccCd</a>
+</p></td>
+<td><p align="left">Major Clinical Category (CIHI Group 19)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRMCC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgCd.html">hraCmgCd</a>
+</p></td>
+<td><p align="left">Case Mix Group Code (CIHI Group 19)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRDRG(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgTypeCd.html">hraCmgTypeCd</a>
+</p></td>
+<td><p align="left">Case Mix Group Type Code (CIHI Group 19)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRCMGT(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgQuartile.html">hraCmgQuartile</a>
+</p></td>
+<td><p align="left">Case Mis Group Quartile (CIHI Group 19)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRQRTL(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRiwExclusionFactor.html">hraRiwExclusionFactor</a>
+</p></td>
+<td><p align="left">Resource intensity weight exclusion factor (CIHI Group 19)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HREXCL(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedure.html">hraCmgProcedure</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure (CIHI Group 11 Field 02)</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPROC(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureSts.html">hraCmgProcedureSts</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Status (CIHI Group 11 Field 03)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureLocation.html">hraCmgProcedureLocation</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Location (CIHI Group 11 Field 04)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureExtent.html">hraCmgProcedureExtent</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Extent (CIHI Group 11 Field 05)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureSection.html">hraCmgProcedureSection</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Section (CIHI Group 11 Field 02 digit 1)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureAnatomySite.html">hraCmgProcedureAnatomySite</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Anatomy Site (CIHI Group 11 Field 02 digit 2-3)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureIntervention.html">hraCmgProcedureIntervention</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Intervention (CIHI Group 11 Field 02 digit 4-5)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureApproachTechniq.html">hraCmgProcedureApproachTechniq</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Approach / Technique (CIHI Group 11 Field 02 digit 6-7)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureDeviceUsed.html">hraCmgProcedureDeviceUsed</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Device Used(CIHI Group 11 Field 02 digit 8-9)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureTissueUsed.html">hraCmgProcedureTissueUsed</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Tissue Used (CIHI Group 11 Field 02 digit 10)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureCat.html">hraCmgProcedureCat</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Category</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgProcedureClass.html">hraCmgProcedureClass</a>
+</p></td>
+<td><p align="left">Case Mix Group Procedure Class</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRiwValue.html">hraRiwValue</a>
+</p></td>
+<td><p align="left">Resource Intensity Weight Value(CIHI Group 19)</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMohRiw.html">hraMohRiw</a>
+</p></td>
+<td><p align="left">Ministry of Health Resource Intensity Weight Value(CIHI Group 19)</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraSurgeyTypeCd.html">hraSurgeyTypeCd</a>
+</p></td>
+<td><p align="left">Surgery type code.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRSURT(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPatName.html">hraPatName</a>
+</p></td>
+<td><p align="left">Patient Name</p></td>
+<td><p align="left">varchar(60)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAgeCd.html">hraAgeCd</a>
+</p></td>
+<td><p align="left">Age Code</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAge.html">hraAge</a>
+</p></td>
+<td><p align="left">Age</p></td>
+<td><p align="left">numeric(6,3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAcuteDays.html">hraAcuteDays</a>
+</p></td>
+<td><p align="left">Number of acute days</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraExpectedDschDtm.html">hraExpectedDschDtm</a>
+</p></td>
+<td><p align="left">Expected discharge date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMohQuartile.html">hraMohQuartile</a>
+</p></td>
+<td><p align="left">Ministry of Health Quartile</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRQRTL(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMohRiwExclusionFactor.html">hraMohRiwExclusionFactor</a>
+</p></td>
+<td><p align="left">Ministry of Health resource intensity weight exclusion factor (CIHI Group 19)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HREXCL(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraIcuDays.html">hraIcuDays</a>
+</p></td>
+<td><p align="left">Number of days in ICU</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNursSta.html">hraNursSta</a>
+</p></td>
+<td><p align="left">Nursing Station</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRNRSU(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraProcedurePerformed.html">hraProcedurePerformed</a>
+</p></td>
+<td><p align="left">Indicates if a procedure was performed</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraComorbidityCd.html">hraComorbidityCd</a>
+</p></td>
+<td><p align="left">Comorbidity Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraMultiPageAbstract.html">hraMultiPageAbstract</a>
+</p></td>
+<td><p align="left">Indicates if this is a multi page abstract</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraError.html">hraError</a>
+</p></td>
+<td><p align="left">Indicates if the abstract had validation errors.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPreOpDays.html">hraPreOpDays</a>
+</p></td>
+<td><p align="left">Number of pre-op days.</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPostOpDays.html">hraPostOpDays</a>
+</p></td>
+<td><p align="left">Number of post-op days</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgYearUsedForAssignment.html">hraCmgYearUsedForAssignment</a>
+</p></td>
+<td><p align="left">Year used for CMG assignment (CIHI Group 19)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgYearUsedForAssignmentSht.html">hraCmgYearUsedForAssignmentSht</a>
+</p></td>
+<td><p align="left">Short year used for CMG assignment (CIHI Group 19)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAdmCycle.html">hraAdmCycle</a>
+</p></td>
+<td><p align="left">Admit Cycle (used by health records only.</p></td>
+<td><p align="left">varchar(6)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAdmDayOfWeek.html">hraAdmDayOfWeek</a>
+</p></td>
+<td><p align="left">Admit day of week</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgAgeGroup.html">hraCmgAgeGroup</a>
+</p></td>
+<td><p align="left">CMG age group (CIHI Group 19)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRAGEG(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAlcLos.html">hraAlcLos</a>
+</p></td>
+<td><p align="left">Number of days under Alternate Level of Care</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgComplexity.html">hraCmgComplexity</a>
+</p></td>
+<td><p align="left">Case Mix Group concatenated with the case complexity. (CIHI Group 19)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraComplexity.html">hraComplexity</a>
+</p></td>
+<td><p align="left">Complexity of the case</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRPLX(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDschCycle.html">hraDschCycle</a>
+</p></td>
+<td><p align="left">Discharge Cycle (used by Health Records)</p></td>
+<td><p align="left">varchar(6)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDschDayOfWeek.html">hraDschDayOfWeek</a>
+</p></td>
+<td><p align="left">Discharge day of week.</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraExpectedLos.html">hraExpectedLos</a>
+</p></td>
+<td><p align="left">Expected Length of Stay</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraTrimPoint.html">hraTrimPoint</a>
+</p></td>
+<td><p align="left">Trim Point</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraWorkingDpg.html">hraWorkingDpg</a>
+</p></td>
+<td><p align="left">Working DPG</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraErWaitTime.html">hraErWaitTime</a>
+</p></td>
+<td><p align="left">Emergency Room Wait time.</p></td>
+<td><p align="left">numeric(6,2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraUnplannedReadm.html">hraUnplannedReadm</a>
+</p></td>
+<td><p align="left">Indicates if this is an unplanned re-admission</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraBloodGivenCd.html">hraBloodGivenCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received blood. (CIHI Group 17 Field 01)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRedCellsCd.html">hraRedCellsCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received red cells. (CIHI Group 17 Field 02)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPlateletsGivenCd.html">hraPlateletsGivenCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received patelets. (CIHI Group 17 Field 03)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPlasmaGivenCd.html">hraPlasmaGivenCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received plasma. (CIHI Group 17 Field 04)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAlbuminGivenCd.html">hraAlbuminGivenCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received albumin. (CIHI Group 17 Field 05)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraOtherBloodProductsGivenCd.html">hraOtherBloodProductsGivenCd</a>
+</p></td>
+<td><p align="left">Indicates if the patient received other blood products. (CIHI Group 17 Field 06)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraAutoTransfusionCd.html">hraAutoTransfusionCd</a>
+</p></td>
+<td><p align="left">Auto transfusion code (CIHI Group 17 Field 07)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraCmgQuartileAcuteDays.html">hraCmgQuartileAcuteDays</a>
+</p></td>
+<td><p align="left">Case Mix Group Quartile acute days (CIHI Group 19)</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">HRQRTL</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraHealthProvOfIssue.html">hraHealthProvOfIssue</a>
+</p></td>
+<td><p align="left">Health province of issue.  (CIHI Group 03 Field 06 ?)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPerDiemRaWeight.html">hraPerDiemRaWeight</a>
+</p></td>
+<td><p align="left">Per diem RA weight</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPerDiemWeight.html">hraPerDiemWeight</a>
+</p></td>
+<td><p align="left">Per diem weight</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraRiw.html">hraRiw</a>
+</p></td>
+<td><p align="left">Resource Intensity Weight (CIHI Group 19)</p></td>
+<td><p align="left">numeric(10,4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraUserDefinedGroup1.html">hraUserDefinedGroup1</a>
+</p></td>
+<td><p align="left">User defined group 1</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraUserDefinedGroup2.html">hraUserDefinedGroup2</a>
+</p></td>
+<td><p align="left">User defined group 2</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraUserDefinedGroup3.html">hraUserDefinedGroup3</a>
+</p></td>
+<td><p align="left">User defined group 3</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraFacilityCampus.html">hraFacilityCampus</a>
+</p></td>
+<td><p align="left">Campus where the patient was seen.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraFacilityTargetLos.html">hraFacilityTargetLos</a>
+</p></td>
+<td><p align="left">Local facility (TOH) target LOS (not used as of 06/2005)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraFacilityTargetLosDesc.html">hraFacilityTargetLosDesc</a>
+</p></td>
+<td><p align="left">Description of the target LOS (not used as of 06/2005)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraLosBestPractice.html">hraLosBestPractice</a>
+</p></td>
+<td><p align="left">The best practice length of stay. (not used as of 06/2005)</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraLosBestPracticeInstitution.html">hraLosBestPracticeInstitution</a>
+</p></td>
+<td><p align="left">The institution with the best practice LOS. (not used as of 06/2005)</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraGlasgowComaScore.html">hraGlasgowComaScore</a>
+</p></td>
+<td><p align="left">Glasgow Coma Score. (CIHI Group 13 Field 09)</p></td>
+<td><p align="left">numeric(2,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraGestationalAge.html">hraGestationalAge</a>
+</p></td>
+<td><p align="left">Gestational Age. (CIHI Group 18 Field 06)</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraLeftErDeptDtm.html">hraLeftErDeptDtm</a>
+</p></td>
+<td><p align="left">Date / time the patient left the Emergency room. (CIHI Group 04 Field 13 & 14)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevPreTermDeliveries.html">hraNumPrevPreTermDeliveries</a>
+</p></td>
+<td><p align="left">Number of previous pre Term deliveries. (CIHI Group 18 Field 02)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevNewborns.html">hraNumPrevNewborns</a>
+</p></td>
+<td><p align="left">Number of previous newborns. (CIHI Group 18 Field 05)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevTherapeuticAbortions.html">hraNumPrevTherapeuticAbortions</a>
+</p></td>
+<td><p align="left">Number of previous therapeutic abortions (CIHI Group 18 Field 04)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevSpontaneousAbortions.html">hraNumPrevSpontaneousAbortions</a>
+</p></td>
+<td><p align="left">Number of previous spontaneous abortions. (CIHI Group 18 Field 03)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevInducedAbortions.html">hraNumPrevInducedAbortions</a>
+</p></td>
+<td><p align="left">Number of previous induced abortions.</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraNumPrevDeliveries.html">hraNumPrevDeliveries</a>
+</p></td>
+<td><p align="left">Number of previous deliveries. (CIHI Group 18 Field 01)</p></td>
+<td><p align="left">smallint</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraDecisionToAdmDtm.html">hraDecisionToAdmDtm</a>
+</p></td>
+<td><p align="left">Date / Time the decision to admit the patient was made. (CIHI Group 04 Field 11 & 12)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrAbstract_hraPatWID.html">hraPatWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

@@ -1,0 +1,192 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - Nprovider"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">Nprovider</font></h1>
+<b>Description: </b>Nprovider Description
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proWID.html">proWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proWCT.html">proWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proWUT.html">proWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proWUU.html">proWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proTypCd.html">proTypCd</a>
+</p></td>
+<td><p align="left">Provider Type Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proSourceAppCd.html">proSourceAppCd</a>
+</p></td>
+<td><p align="left">The source application code for this provider code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">srcAppCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proStsCd.html">proStsCd</a>
+</p></td>
+<td><p align="left">Provider Status Code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proCd.html">proCd</a>
+</p></td>
+<td><p align="left">Provider number</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proSecondaryCd.html">proSecondaryCd</a>
+</p></td>
+<td><p align="left">Provider Secondary Code</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proLastName.html">proLastName</a>
+</p></td>
+<td><p align="left">Provider Last name</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proFirstName.html">proFirstName</a>
+</p></td>
+<td><p align="left">Provider First name</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proInitials.html">proInitials</a>
+</p></td>
+<td><p align="left">Provider's initials</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proGenderCd.html">proGenderCd</a>
+</p></td>
+<td><p align="left">Provider gender</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">genderCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proLanguageCd.html">proLanguageCd</a>
+</p></td>
+<td><p align="left">Provider language</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">languageCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proOhipNum.html">proOhipNum</a>
+</p></td>
+<td><p align="left">Provider OHIP number</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nprovider_proDeceasedInd.html">proDeceasedInd</a>
+</p></td>
+<td><p align="left">Provider death indicator</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

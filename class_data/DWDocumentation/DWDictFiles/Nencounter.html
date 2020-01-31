@@ -1,0 +1,921 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - Nencounter"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">Nencounter</font></h1>
+<b>Description: </b>Encounter information
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encWID.html">encWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encWCT.html">encWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encWUT.html">encWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encWUU.html">encWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatWID.html">encPatWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encSourceAppCd.html">encSourceAppCd</a>
+</p></td>
+<td><p align="left">The source application for this encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">srcAppCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encCampusCd.html">encCampusCd</a>
+</p></td>
+<td><p align="left">campus</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">campusCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisCampusCd.html">encOacisCampusCd</a>
+</p></td>
+<td><p align="left">The campus code from the OACIS system for this encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">campusCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisSID.html">encOacisSID</a>
+</p></td>
+<td><p align="left">This is the unique identifier (SID) for this encounter in OACIS.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encMrn.html">encMrn</a>
+</p></td>
+<td><p align="left">medical record number</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encNum.html">encNum</a>
+</p></td>
+<td><p align="left">encounter number</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encSMSCaseNum.html">encSMSCaseNum</a>
+</p></td>
+<td><p align="left">case number</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encTypeCd.html">encTypeCd</a>
+</p></td>
+<td><p align="left">Identifies the type of patient encounter, such as inpatient, outpatient, emergency, surgical daycare, medical daycare.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">encTypeCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisTypeCd.html">encOacisTypeCd</a>
+</p></td>
+<td><p align="left">The encounter type from the OACIS system</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">encTypeCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encVisitTypeCd.html">encVisitTypeCd</a>
+</p></td>
+<td><p align="left">visit type</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">visitTypeCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisVisitTypeCd.html">encOacisVisitTypeCd</a>
+</p></td>
+<td><p align="left">The visit type from OACIS.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">visitTypeCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encSeriesInd.html">encSeriesInd</a>
+</p></td>
+<td><p align="left">This indicator is set to 'Y' (for yes) if this encounter is part of a series of visits associated with the same outpatient registration.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encStsCd.html">encStsCd</a>
+</p></td>
+<td><p align="left">The status of the encounter (such as active, discharged, etc)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">encStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisStsCd.html">encOacisStsCd</a>
+</p></td>
+<td><p align="left">The encounter status code from OACIS.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">encOacisStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encStartDtm.html">encStartDtm</a>
+</p></td>
+<td><p align="left">The visit time for this encounter</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisStartDtm.html">encOacisStartDtm</a>
+</p></td>
+<td><p align="left">The encounter start date and time, as identified in OACIS.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encEndDtm.html">encEndDtm</a>
+</p></td>
+<td><p align="left">The discharge time for this encounter</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisEndDtm.html">encOacisEndDtm</a>
+</p></td>
+<td><p align="left">The encounter end date and time, as identified in OACIS.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatLastName.html">encPatLastName</a>
+</p></td>
+<td><p align="left">patient name</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatFirstName.html">encPatFirstName</a>
+</p></td>
+<td><p align="left">patient's first name</p></td>
+<td><p align="left">varchar(40)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encBirthDtm.html">encBirthDtm</a>
+</p></td>
+<td><p align="left">Patient birth date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressStreetNum.html">encPatAddressStreetNum</a>
+</p></td>
+<td><p align="left">patient address street number</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressStreet.html">encPatAddressStreet</a>
+</p></td>
+<td><p align="left">patient address street</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressApartment.html">encPatAddressApartment</a>
+</p></td>
+<td><p align="left">patient appartment number</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressCity.html">encPatAddressCity</a>
+</p></td>
+<td><p align="left">patient address city</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">city(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressProv.html">encPatAddressProv</a>
+</p></td>
+<td><p align="left">patient address province</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">provCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressCountry.html">encPatAddressCountry</a>
+</p></td>
+<td><p align="left">patient address country</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">countryCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAddressPostalCd.html">encPatAddressPostalCd</a>
+</p></td>
+<td><p align="left">patient postal code</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatAgeAtAdm.html">encPatAgeAtAdm</a>
+</p></td>
+<td><p align="left">Patient Age</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatGenderCd.html">encPatGenderCd</a>
+</p></td>
+<td><p align="left">The patient's gender</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">genderCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encMaritalSts.html">encMaritalSts</a>
+</p></td>
+<td><p align="left">The patient's marital status</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">maritalStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatLanguageCd.html">encPatLanguageCd</a>
+</p></td>
+<td><p align="left">The patient's language preference.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">languageCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAttendingProWID.html">encAttendingProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">proCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatReligionCd.html">encPatReligionCd</a>
+</p></td>
+<td><p align="left">Patient's religion</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">religionCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encConditionCd.html">encConditionCd</a>
+</p></td>
+<td><p align="left">The condition of the inpatient.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">condCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAdmPriority.html">encAdmPriority</a>
+</p></td>
+<td><p align="left">The inpatient admission priority.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">admPrioCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encRfpCd.html">encRfpCd</a>
+</p></td>
+<td><p align="left">Responsibility for payment (OHIP, RAMQ, etc)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">rfpCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAdmType.html">encAdmType</a>
+</p></td>
+<td><p align="left">The inpatient admission type</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">admTpCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encHospSvcCd.html">encHospSvcCd</a>
+</p></td>
+<td><p align="left">Hospital service</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">hospSvcCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisHospSvcCd.html">encOacisHospSvcCd</a>
+</p></td>
+<td><p align="left">The hospital Service code from the OACIS system for this encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">hospSvcCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encNursSta.html">encNursSta</a>
+</p></td>
+<td><p align="left">The nursing station (ward) for this inpatient encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">nursStaCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encBed.html">encBed</a>
+</p></td>
+<td><p align="left">The bed for this inpatient encounter.</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAdmProWID.html">encAdmProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">proCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAccommodationGiven.html">encAccommodationGiven</a>
+</p></td>
+<td><p align="left">The accommodation given for this inpatient encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">accommodationCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encDeathInd.html">encDeathInd</a>
+</p></td>
+<td><p align="left">Discharge Disposition (also known as the death indicator)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">deathIndCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encDschDispDetail.html">encDschDispDetail</a>
+</p></td>
+<td><p align="left">The discharge disposition detail for this patient encounter. It further defines the discharge disposition.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">dschDispCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAppointmentDtm.html">encAppointmentDtm</a>
+</p></td>
+<td><p align="left">The outpatient appointment date and time.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encClinicCd.html">encClinicCd</a>
+</p></td>
+<td><p align="left">The outpatient clinic code of this encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">clinicCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisClinicCd.html">encOacisClinicCd</a>
+</p></td>
+<td><p align="left">The clinic code, as identified in the OACIS system.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">clinicCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareOccurInd.html">encOffActiveCareOccurInd</a>
+</p></td>
+<td><p align="left">Off active care occur ind</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareStartDtm1.html">encOffActiveCareStartDtm1</a>
+</p></td>
+<td><p align="left">Off active care start date 1</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareReturnDtm1.html">encOffActiveCareReturnDtm1</a>
+</p></td>
+<td><p align="left">Off active care return date 1</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareStartDtm2.html">encOffActiveCareStartDtm2</a>
+</p></td>
+<td><p align="left">Off active care start date 2</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareReturnDtm2.html">encOffActiveCareReturnDtm2</a>
+</p></td>
+<td><p align="left">Off active care return date 2</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareStartDtm3.html">encOffActiveCareStartDtm3</a>
+</p></td>
+<td><p align="left">Off active care start date 3</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareReturnDtm3.html">encOffActiveCareReturnDtm3</a>
+</p></td>
+<td><p align="left">Off active care return date 3</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareStartDtm4.html">encOffActiveCareStartDtm4</a>
+</p></td>
+<td><p align="left">Off active care start date 4</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOffActiveCareReturnDtm4.html">encOffActiveCareReturnDtm4</a>
+</p></td>
+<td><p align="left">Off active care return date 4</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOccupationCd.html">encOccupationCd</a>
+</p></td>
+<td><p align="left">The patient's occupation code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">occupationCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOccupationDesc.html">encOccupationDesc</a>
+</p></td>
+<td><p align="left">The description of the patient's occupation</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatWeight.html">encPatWeight</a>
+</p></td>
+<td><p align="left">Patient's weight</p></td>
+<td><p align="left">numeric(6,3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAdmRoute.html">encAdmRoute</a>
+</p></td>
+<td><p align="left">The inpatient admission route</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">admRteCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encDiagnosisCd.html">encDiagnosisCd</a>
+</p></td>
+<td><p align="left">The inpatient diagnosis code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">diagCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encExpectedLos.html">encExpectedLos</a>
+</p></td>
+<td><p align="left">The expected length of stay for an inpatient encounter.</p></td>
+<td><p align="left">numeric(3,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPatDomicile.html">encPatDomicile</a>
+</p></td>
+<td><p align="left">The patient's domicile (for inpatient encounters)</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">domicileCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAccidentDtm.html">encAccidentDtm</a>
+</p></td>
+<td><p align="left">If the encounter was the result of an accident, this identifies the accident date.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAppointmentType.html">encAppointmentType</a>
+</p></td>
+<td><p align="left">Appointment type</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">appointmentTpCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAppointmentSts.html">encAppointmentSts</a>
+</p></td>
+<td><p align="left">Appointment status (for outpatient encounters)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">appointmentStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encFamilyProName.html">encFamilyProName</a>
+</p></td>
+<td><p align="left">Family doctor name</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encHealthNum.html">encHealthNum</a>
+</p></td>
+<td><p align="left">Health number</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encHealthNumExpiry.html">encHealthNumExpiry</a>
+</p></td>
+<td><p align="left">health card expiry date</p></td>
+<td><p align="left">varchar(6)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOtherProvInsuranceProv.html">encOtherProvInsuranceProv</a>
+</p></td>
+<td><p align="left">other provincial insurance province</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">provCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOtherProvInsuranceReason.html">encOtherProvInsuranceReason</a>
+</p></td>
+<td><p align="left">other provincial insurance reason</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encReferralDtm.html">encReferralDtm</a>
+</p></td>
+<td><p align="left">The date of referral to TOH for outpatient encounters.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encSrcOfReferrralRequest.html">encSrcOfReferrralRequest</a>
+</p></td>
+<td><p align="left">Source of referral request (for outpatients)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">srcRefReqCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encReferralSrc.html">encReferralSrc</a>
+</p></td>
+<td><p align="left">Referral source (for outpatients)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">refSrcCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encReferringInstitution.html">encReferringInstitution</a>
+</p></td>
+<td><p align="left">Referring institution/clinic (for outpatients)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">instCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encTransferFromInstitutionCd.html">encTransferFromInstitutionCd</a>
+</p></td>
+<td><p align="left">Transfer from institution code (inpatients)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">instCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encTransferFromInstitutionName.html">encTransferFromInstitutionName</a>
+</p></td>
+<td><p align="left">Transfer from institution name (inpatients)</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encTransferFromInstitutionType.html">encTransferFromInstitutionType</a>
+</p></td>
+<td><p align="left">Transfer from institution type (inpatients)</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">institutionType(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encTransferFromProv.html">encTransferFromProv</a>
+</p></td>
+<td><p align="left">Transfer from province (inpatients)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">provCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encVisitDesc.html">encVisitDesc</a>
+</p></td>
+<td><p align="left">The visit description is used to further identify the type of outpatients encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">visitDescCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAccompaniedByCd.html">encAccompaniedByCd</a>
+</p></td>
+<td><p align="left">The accompanied by code identifies the person who accompanied the patient to the ER or outpatient clinic.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">accompaniedCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAmbulanceInd.html">encAmbulanceInd</a>
+</p></td>
+<td><p align="left">This identifies if a patient arrived by ambulance to the ER or clinic.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAnaesthesiaRequired.html">encAnaesthesiaRequired</a>
+</p></td>
+<td><p align="left">This identifies if anaesthesia is/was required for an inpatient encounter.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encInfectedCase.html">encInfectedCase</a>
+</p></td>
+<td><p align="left">This indicates whether or not the inpatient encounter was considered an infected case.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAccidentInd.html">encAccidentInd</a>
+</p></td>
+<td><p align="left">The accident indicator identifies if the encounter was the result of an accident.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encAccommodationRqstd.html">encAccommodationRqstd</a>
+</p></td>
+<td><p align="left">This is the accommodation requested by the patient for an inpatient encounter.</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">accommodationCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encPresentingDiagnosis.html">encPresentingDiagnosis</a>
+</p></td>
+<td><p align="left">A free-format text diagnosis for the encounter</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisPresentingDiagnosis.html">encOacisPresentingDiagnosis</a>
+</p></td>
+<td><p align="left">The presenting diagnosis from the OACIS system for this encounter.</p></td>
+<td><p align="left">varchar(255)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOpModule.html">encOpModule</a>
+</p></td>
+<td><p align="left">The location of the outpatient module</p></td>
+<td><p align="left">varchar(15)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">opModule(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Nencounter_encOacisOpModule.html">encOacisOpModule</a>
+</p></td>
+<td><p align="left">The outpatient module, as identified in the OACIS system.</p></td>
+<td><p align="left">varchar(15)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">opModule(*)</p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

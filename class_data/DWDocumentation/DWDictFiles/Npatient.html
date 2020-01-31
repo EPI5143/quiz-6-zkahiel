@@ -1,0 +1,381 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - Npatient"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">Npatient</font></h1>
+<b>Description: </b>Patient level information
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patWID.html">patWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patWCT.html">patWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patWUT.html">patWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patWUU.html">patWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patMrn.html">patMrn</a>
+</p></td>
+<td><p align="left">Medical record number</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">Yes</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patOacisPID.html">patOacisPID</a>
+</p></td>
+<td><p align="left">patient ID, Oacis internal key</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patFacWID.html">patFacWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patMrnSts.html">patMrnSts</a>
+</p></td>
+<td><p align="left">The status of this medical record number.</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patMergeToMrn.html">patMergeToMrn</a>
+</p></td>
+<td><p align="left">The medical record number that this patient record was merged to.</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patMergeToPID.html">patMergeToPID</a>
+</p></td>
+<td><p align="left">The PID that this record was merged to.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patLastName.html">patLastName</a>
+</p></td>
+<td><p align="left">Last  name</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patFirstName.html">patFirstName</a>
+</p></td>
+<td><p align="left">First Name</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patBirthDtm.html">patBirthDtm</a>
+</p></td>
+<td><p align="left">Birth date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patMaritalSts.html">patMaritalSts</a>
+</p></td>
+<td><p align="left">Marital status</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">maritalStsCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patGenderCd.html">patGenderCd</a>
+</p></td>
+<td><p align="left">Gender</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">genderCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patLanguageCd.html">patLanguageCd</a>
+</p></td>
+<td><p align="left">Primary language code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">languageCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patReligionCd.html">patReligionCd</a>
+</p></td>
+<td><p align="left">Religion code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">religionCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patHomePhoneNum.html">patHomePhoneNum</a>
+</p></td>
+<td><p align="left">Home phone number</p></td>
+<td><p align="left">varchar(15)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressStreet.html">patAddressStreet</a>
+</p></td>
+<td><p align="left">House number + street</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressAptNum.html">patAddressAptNum</a>
+</p></td>
+<td><p align="left">Apartment number</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressCity.html">patAddressCity</a>
+</p></td>
+<td><p align="left">City</p></td>
+<td><p align="left">varchar(20)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">city(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressProv.html">patAddressProv</a>
+</p></td>
+<td><p align="left">Province</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">provCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressCountry.html">patAddressCountry</a>
+</p></td>
+<td><p align="left">Country</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">countryCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAddressPostalCd.html">patAddressPostalCd</a>
+</p></td>
+<td><p align="left">Postal Code</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patRfpCd.html">patRfpCd</a>
+</p></td>
+<td><p align="left">Responsibility for payment</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">rfpCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patHealthNum.html">patHealthNum</a>
+</p></td>
+<td><p align="left">Health number</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patDeathInd.html">patDeathInd</a>
+</p></td>
+<td><p align="left">Death indicator</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">deathIndCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patVipInd.html">patVipInd</a>
+</p></td>
+<td><p align="left">VIP indicator</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patFamilyProName.html">patFamilyProName</a>
+</p></td>
+<td><p align="left">Family doctor  name</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patOccupation.html">patOccupation</a>
+</p></td>
+<td><p align="left">Patient occupation</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">occupationCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patAllergyInd.html">patAllergyInd</a>
+</p></td>
+<td><p align="left">Allergies flag</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patFatherFirstName.html">patFatherFirstName</a>
+</p></td>
+<td><p align="left">Fathers first name</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patWorkPhoneNum.html">patWorkPhoneNum</a>
+</p></td>
+<td><p align="left">Work phone number</p></td>
+<td><p align="left">varchar(30)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patFamilyProWID.html">patFamilyProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">proCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patDeathDtm.html">patDeathDtm</a>
+</p></td>
+<td><p align="left">Death datetime</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patIsolAlert.html">patIsolAlert</a>
+</p></td>
+<td><p align="left">Isolation alert</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">isolAlertCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="Npatient_patLastChangeDtm.html">patLastChangeDtm</a>
+</p></td>
+<td><p align="left">The last update date and time for this patient record.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

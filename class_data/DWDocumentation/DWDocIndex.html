@@ -1,0 +1,114 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - The Ottawa Hospital Data Warehouse - Data Dictionary"</title>
+<link href="DWDictFiles\DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Data Warehouse Normalized Data Model Documentation</h1>
+Documentation generated on April 19, 2006 at 11:13:36.
+<p><p>
+<h2>Database Naming Conventions and Standards</h2>
+<p><p>
+<b>Database Table Names</b><br>A series of meaningful word(s) to describe the use of the table should be used as table name. The first letter of each table name will represent the model (N indicates the Normalized model).
+The next word (which immediately follows the first letter) should not be capitalized, but each subsequent word should be capitalized. All words should be concatenated with no joining character.
+(e.g. NserviceReportText)
+<br><br><b>Database Column Names</b><br>
+A two, three or four character prefix representing the table in which the element resides must be used for each column name, without capital letters. Each subsequent word following the prefix must be capitalized. (e.g. encCampusCd; svrtLineNum)
+<br><br><b>Design Standards</b><br>
+Tables will have identity fields assigned with the table prefix (as described for column names) and the name WID which stands for Warehouse Identifier (e.g. facWID in the Nfacility table).
+These will be defined as integer and will generally be the primary key for the table.
+These will be defined as integer and will generally be the primary key for the table.
+Foreign keys will be prefixed for the table in which they reside and carry the name of the field from the parent table. (e.g. sacFacWID in the NsourceApplicationCode table is the foreign key for the facWID primary key).
+<br><br><b>Standard Table Columns</b><br>
+All tables will also have columns for create date and time (WCT), update date and time (WUT) and update user (WUU).
+These indicate when the entries were created <b>(WCT=Warehouse Create Time)</b> and when the entries were last updated <b>(WUT=Warehouse Update Time)</b> and who or what program last updated the entry <b>(WUT=Warehouse Update User)</b>.
+These will follow the naming convention described above (e.g. facWCT).
+<br><br>It is important to understand that these columns reflect create / update activity in the Data Warehouse and not in the source system.
+Also, sometimes the Data Warehouse update process is such that a new row is always re-created rather than being updated.
+<p><p>
+<b>Abbreviations</b><br>In general words used as table and column names are not abbreviated, however the following terms were common enough to abbreviate:<br>
+<li>Admission / Admitting / Admit=Adm<br>
+<li>Ambulance=Amb<br>
+<li>Application=App<br>
+<li>Birth Date=BirthDtm<br>
+<li>Category=Cat<br>
+<li>Code=Cd<br>
+<li>Comment=Cmt<br>
+<li>Data Warehouse=Dw<br>
+<li>Date/Time=Dtm<br>
+<li>Date=Dt<br>
+<li>Description=Desc<br>
+<li>Discharge=Dsch<br>
+<li>Doctor=Dr<br>
+<li>Encounter=Encntr<br>
+<li>Field=Fld<br>
+<li>Format=Fmt<br>
+<li>Frequency=Freq<br>
+<li>Group=Grp<br>
+<li>Hospital=Hosp<br>
+<li>Identifier=Id<br>
+<li>Indicator=Ind<br>
+<li>Medical Record Number=Mrn<br>
+<li>Number=Num<br>
+<li>Nursing Station=NursSta<br>
+<li>Quality=Qlty<br>
+<li>Quantity=Qty<br>
+<li>Record=Rcrd<br>
+<li>Report=Rprt<br>
+<li>Service=Svc<br>
+<li>Source=Src<br>
+<li>Status=Sts<br>
+<li>System=Sys<br>
+<li>Time=Tm<br>
+<li>Update=Upd<br>
+Whenever used, abbreviations will have the first letter capitalized with no period (e.g. Mrn, Dr).
+<p><p>
+<h2>Database Map</h2>
+<MAP name="TableMap">
+<AREA Shape="rect" Coords="370,60,430,110" href="DWDictFiles\Nallergy.html">
+<AREA Shape="rect" Coords="355,135,445,185" href="DWDictFiles\Nencounter.html">
+<AREA Shape="rect" Coords="440,305,570,355" href="DWDictFiles\NerTracking.html">
+<AREA Shape="rect" Coords="132,350,252,400" href="DWDictFiles\NfunctionalCentre.html">
+<AREA Shape="rect" Coords="272,350,392,400" href="DWDictFiles\NhospSvc.html">
+<AREA Shape="rect" Coords="440,415,570,460" href="DWDictFiles\NhrAbstract.html">
+<AREA Shape="rect" Coords="615,310,780,360" href="DWDictFiles\NhrDiagnosis.html">
+<AREA Shape="rect" Coords="615,360,780,410" href="DWDictFiles\NhrProcedure.html">
+<AREA Shape="rect" Coords="615,560,780,610" href="DWDictFiles\NhrProject.html">
+<AREA Shape="rect" Coords="615,460,780,510" href="DWDictFiles\NhrProvider.html">
+<AREA Shape="rect" Coords="615,510,780,560" href="DWDictFiles\NhrSpecialCareUnit.html">
+<AREA Shape="rect" Coords="615,410,780,460" href="DWDictFiles\NhrTransfer.html">
+<AREA Shape="rect" Coords="615,148,760,198" href="DWDictFiles\NhrtService.html">
+<AREA Shape="rect" Coords="440,360,570,410" href="DWDictFiles\NipCensusHistory.html">
+<AREA Shape="rect" Coords="615,200,760,250" href="DWDictFiles\NlabService.html">
+<AREA Shape="rect" Coords="645,252,800,302" href="DWDictFiles\NlabServiceFootnote.html">
+<AREA Shape="rect" Coords="112,542,262,592" href="DWDictFiles\NnuCapacity.html">
+<AREA Shape="rect" Coords="182,482,372,529" href="DWDictFiles\NnuSvcCapacity.html">
+<AREA Shape="rect" Coords="205,135,310,185" href="DWDictFiles\Npatient.html">
+<AREA Shape="rect" Coords="640,100,800,150" href="DWDictFiles\NphmIngredient.html">
+<AREA Shape="rect" Coords="615,48,760,98" href="DWDictFiles\NphmService.html">
+<AREA Shape="rect" Coords="1,315,130,365" href="DWDictFiles\Nprovider.html">
+<AREA Shape="rect" Coords="615,1,760,48" href="DWDictFiles\NradService.html">
+<AREA Shape="rect" Coords="455,135,575,185" href="DWDictFiles\NService.html">
+<AREA Shape="rect" Coords="455,200,575,245" href="DWDictFiles\NserviceReport.html">
+<AREA Shape="rect" Coords="450,260,580,305" href="DWDictFiles\NserviceReportText.html">
+<AREA Shape="rect" Coords="1,370,130,420" href="DWDictFiles\NserviceTemplate.html">
+<AREA Shape="rect" Coords="132,208,250,258" href="DWDictFiles\NstaffingLevel.html">
+<AREA Shape="rect" Coords="272,542,450,592" href="DWDictFiles\NhospSvcCapacity.html">
+<AREA Shape="rect" Coords="180,60,340,110" href="DWDictFiles\NtransfusionComments.html">
+<AREA Shape="rect" Coords="132,415,262,465" href="DWDictFiles\Nunit.html">
+<AREA Shape="rect" Coords="1,260,130,310" href="DWDictFiles\NdwColumns.html">
+<AREA Shape="rect" Coords="1,440,130,490" href="DWDictFiles\NcodeCategory.html">
+<AREA Shape="rect" Coords="1,505,130,555" href="DWDictFiles\Ncode.html">
+<AREA Shape="rect" Coords="262,208,382,258" href="DWDictFiles\NsourceApplicationCode.html">
+<AREA Shape="rect" Coords="220,270,340,320" href="DWDictFiles\Nfacility.html">
+</MAP>
+<img src="DWDictFiles\DWLayout.jpg" width="800" height="600" alt="TOH DW Tables Diagram" longdesc="The Ottawa Hospital Data Warehouse - Tables Diagram" Usemap="#TableMap">
+<p><p>
+<a href="DWDictFiles\DWReferenceMain.html"><h2>Database Reference Information</h2></a>
+<p><p>
+</body></html>

@@ -1,0 +1,264 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NhrProject"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NhrProject</font></h1>
+<b>Description: </b>Health records abstracts - Project information
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjWID.html">hprjWID</a>
+</p></td>
+<td><p align="left">Unique identifier for each entry. This is an unidentifiable sequential number assigned to each row of the table.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjWCT.html">hprjWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjWUT.html">hprjWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjWUU.html">hprjWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjHraEncWID.html">hprjHraEncWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key. This identifies the encounter abstract that this record belongs to. It provides the link to the NhrAbstract and Nencounter tables.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjLineNum.html">hprjLineNum</a>
+</p></td>
+<td><p align="left">Sequential number assigned to the projects within a discharge abstract.</p></td>
+<td><p align="left">numeric(3,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProjectNum.html">hprjProjectNum</a>
+</p></td>
+<td><p align="left">Identifier for a project</p></td>
+<td><p align="left">numeric(4,0)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject1.html">hprjProject1</a>
+</p></td>
+<td><p align="left">Project field 1.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject2.html">hprjProject2</a>
+</p></td>
+<td><p align="left">Project field 2.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject3.html">hprjProject3</a>
+</p></td>
+<td><p align="left">Project field 3.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject4.html">hprjProject4</a>
+</p></td>
+<td><p align="left">Project field 4.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject5.html">hprjProject5</a>
+</p></td>
+<td><p align="left">Project field 5.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject6.html">hprjProject6</a>
+</p></td>
+<td><p align="left">Project field 6.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject7.html">hprjProject7</a>
+</p></td>
+<td><p align="left">Project field 7.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject8.html">hprjProject8</a>
+</p></td>
+<td><p align="left">Project field 8.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject9.html">hprjProject9</a>
+</p></td>
+<td><p align="left">Project field 9.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject10.html">hprjProject10</a>
+</p></td>
+<td><p align="left">Project field 10.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject11.html">hprjProject11</a>
+</p></td>
+<td><p align="left">Project field 11.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject12.html">hprjProject12</a>
+</p></td>
+<td><p align="left">Project field 12.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject13.html">hprjProject13</a>
+</p></td>
+<td><p align="left">Project field 13.</p></td>
+<td><p align="left">varchar(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject14.html">hprjProject14</a>
+</p></td>
+<td><p align="left">Project field 14.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject15.html">hprjProject15</a>
+</p></td>
+<td><p align="left">Project field 15.</p></td>
+<td><p align="left">varchar(2)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject16.html">hprjProject16</a>
+</p></td>
+<td><p align="left">Project field 16.</p></td>
+<td><p align="left">varchar(3)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NhrProject_hprjProject17.html">hprjProject17</a>
+</p></td>
+<td><p align="left">Project field 17.</p></td>
+<td><p align="left">varchar(4)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>

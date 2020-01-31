@@ -1,0 +1,561 @@
+<html> <head>
+<meta http-equiv="Content-Type"content="text/html; charset=windows-1252">
+<title>"TOHDW - Data Dictionary Table - NerTracking"</title>
+<link href="DWTheme.css" type="text/css" rel="stylesheet">
+<STYLE TYPE="text/css"MEDIA="screen, projection">
+<!-- 
+  @import url(DW.css);
+  DT { background: yellow; color: black }
+-->
+</STYLE>
+</head> <body>
+<h1>Table: <font color="#ff0000">NerTracking</font></h1>
+<b>Description: </b>Encounter level information specific to Emergency encounters
+<br>
+<br>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Column Name</p></td>
+<td class="Header">
+<p align="center">Description</p></td> 
+<td class="Header">
+<p align="center">Format</p></td> 
+<td class="Header">
+<p align="center">Identified</p></td> 
+<td class="Header">
+<p align="center">Code Category (*=mandatory)</p></td> 
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertEncWID.html">ertEncWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertWCT.html">ertWCT</a>
+</p></td>
+<td><p align="left">The date/time the entry was created in the DW. This does not reflect activity in the source system, just when the row was created in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertWUT.html">ertWUT</a>
+</p></td>
+<td><p align="left">The date/time the entry was last updated in the DW. This does not reflect activity in the source system, just when the row was last updated in the DW. In some instances, updates are performed as delete / insert making this field's usefulness more limited.</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertWUU.html">ertWUU</a>
+</p></td>
+<td><p align="left">The userid or user who last updated the entry. This can be 'ArchiveLoad' to reflect initial bulk loading of the DW or something like 'bfAllergy:31:3373:' which identifies an ETL load process used to update information in the DW.</p></td>
+<td><p align="left">varchar(250)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertArrivalDtm.html">ertArrivalDtm</a>
+</p></td>
+<td><p align="left">Arrival date (ER)</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertDiagnosisCd.html">ertDiagnosisCd</a>
+</p></td>
+<td><p align="left">Diagnosis code (ER)</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertDiagCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAccidentSite.html">ertAccidentSite</a>
+</p></td>
+<td><p align="left">Accident Site (ER)</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertRegistrationUser.html">ertRegistrationUser</a>
+</p></td>
+<td><p align="left">The user who performed the registration</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertReviseUser.html">ertReviseUser</a>
+</p></td>
+<td><p align="left">The user who performed the last revision of this encounter</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertCloseUser.html">ertCloseUser</a>
+</p></td>
+<td><p align="left">The user who closed this visit</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertLastUpdateDtm.html">ertLastUpdateDtm</a>
+</p></td>
+<td><p align="left">Last update date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertStartRegistrationDtm.html">ertStartRegistrationDtm</a>
+</p></td>
+<td><p align="left">Start registration date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmByErDrInd.html">ertAdmByErDrInd</a>
+</p></td>
+<td><p align="left">Admitted by ER physician indicator</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmSvc.html">ertAdmSvc</a>
+</p></td>
+<td><p align="left">ER admission service</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">hospSvcCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmBed.html">ertAdmBed</a>
+</p></td>
+<td><p align="left">ER admission bed</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedDelayReasonCd.html">ertBedDelayReasonCd</a>
+</p></td>
+<td><p align="left">ER bed delay reason code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertBedDelayReasonCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmCancelledInd.html">ertAdmCancelledInd</a>
+</p></td>
+<td><p align="left">ER admission cancelled</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmCancelReasonCd.html">ertAdmCancelReasonCd</a>
+</p></td>
+<td><p align="left">ER admission cancel reason</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertAdmCancelReasonCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmProWID.html">ertAdmProWID</a>
+</p></td>
+<td><p align="left">This is a pointer to a unique identifier in another table. This is also known as a foreign key.</p></td>
+<td><p align="left">integer</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">proCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmDiagnosis.html">ertAdmDiagnosis</a>
+</p></td>
+<td><p align="left">ER admitting diagnosis</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedRequestDtm.html">ertBedRequestDtm</a>
+</p></td>
+<td><p align="left">Bed request date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedReceivedDtm.html">ertBedReceivedDtm</a>
+</p></td>
+<td><p align="left">Bed received date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertConsultRequestDtm.html">ertConsultRequestDtm</a>
+</p></td>
+<td><p align="left">Consultation request date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertConsultArrivalDtm.html">ertConsultArrivalDtm</a>
+</p></td>
+<td><p align="left">Consultation arrival date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertConsultSvc.html">ertConsultSvc</a>
+</p></td>
+<td><p align="left">Consultation service</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">hospSvcCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertDirectConsultInd.html">ertDirectConsultInd</a>
+</p></td>
+<td><p align="left">The indicator for a direct consult</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertPresentingComplaint.html">ertPresentingComplaint</a>
+</p></td>
+<td><p align="left">ER presenting complaint</p></td>
+<td><p align="left">varchar(50)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertGoneDtm.html">ertGoneDtm</a>
+</p></td>
+<td><p align="left">ER gone date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAmbReportReceivedDtm.html">ertAmbReportReceivedDtm</a>
+</p></td>
+<td><p align="left">ER Amb report received date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAmbReportCompleteDtm.html">ertAmbReportCompleteDtm</a>
+</p></td>
+<td><p align="left">ER amb report complete date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertRequestReceivedDtm.html">ertRequestReceivedDtm</a>
+</p></td>
+<td><p align="left">ER request received time</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedAssignDtm.html">ertBedAssignDtm</a>
+</p></td>
+<td><p align="left">ER bed assign date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertTowerBedAssignDtm.html">ertTowerBedAssignDtm</a>
+</p></td>
+<td><p align="left">ER tower bed assign time</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAdmConfirmDtm.html">ertAdmConfirmDtm</a>
+</p></td>
+<td><p align="left">ER admit confirm time</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeDtm1.html">ertBedChangeDtm1</a>
+</p></td>
+<td><p align="left">ER bed change date 1</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeDtm2.html">ertBedChangeDtm2</a>
+</p></td>
+<td><p align="left">ER bed change time 2</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeDtm3.html">ertBedChangeDtm3</a>
+</p></td>
+<td><p align="left">ER bed change date 3</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertTransferConfirmDtm.html">ertTransferConfirmDtm</a>
+</p></td>
+<td><p align="left">ER transfer confirm time</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertReasonForDelay.html">ertReasonForDelay</a>
+</p></td>
+<td><p align="left">ER reason for delay</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeRequest1.html">ertBedChangeRequest1</a>
+</p></td>
+<td><p align="left">ER bed change request 1</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeRequest2.html">ertBedChangeRequest2</a>
+</p></td>
+<td><p align="left">ER bed change request 2</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertBedChangeRequest3.html">ertBedChangeRequest3</a>
+</p></td>
+<td><p align="left">ER bed change request 3</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertCancelPendingReason.html">ertCancelPendingReason</a>
+</p></td>
+<td><p align="left">ER cancel pending reason</p></td>
+<td><p align="left">varchar(5)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertInErNoBedInd.html">ertInErNoBedInd</a>
+</p></td>
+<td><p align="left">In ER no bed</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertSeenByDrDtm.html">ertSeenByDrDtm</a>
+</p></td>
+<td><p align="left">ER seen by doctor date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertSentToRoomDtm.html">ertSentToRoomDtm</a>
+</p></td>
+<td><p align="left">ER sent to room date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertSeenByNurseDtm.html">ertSeenByNurseDtm</a>
+</p></td>
+<td><p align="left">ER seen by nurse date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertTriageDtm.html">ertTriageDtm</a>
+</p></td>
+<td><p align="left">ER triage date</p></td>
+<td><p align="left">datetime</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertRegistrationLocation.html">ertRegistrationLocation</a>
+</p></td>
+<td><p align="left">ER registration local</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertRegistrationLocat(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertNotifyFamilyDrInd.html">ertNotifyFamilyDrInd</a>
+</p></td>
+<td><p align="left">ER notify family phys</p></td>
+<td><p align="left">char(1)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertAmbNum.html">ertAmbNum</a>
+</p></td>
+<td><p align="left">ER ambulance OASIS (Ontario Agencies Supporting Individuals with Special needs) number</p></td>
+<td><p align="left">varchar(10)</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left"></p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertRoomType.html">ertRoomType</a>
+</p></td>
+<td><p align="left">ER room type</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertRoomType(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertDisposition.html">ertDisposition</a>
+</p></td>
+<td><p align="left">ER disposition</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertDisposition(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertPatCat.html">ertPatCat</a>
+</p></td>
+<td><p align="left">ER patient category</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertPatCat(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertWcbVisitCd.html">ertWcbVisitCd</a>
+</p></td>
+<td><p align="left">ER WCB visit code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertWcbVisitCd(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertVisitSts.html">ertVisitSts</a>
+</p></td>
+<td><p align="left">ER visit status</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertVisitSts(*)</p></td>
+</tr>
+<tr>
+<td><p align="left">
+<a href="NerTracking_ertTriageCd.html">ertTriageCd</a>
+</p></td>
+<td><p align="left">ER triage code</p></td>
+<td><p align="left">codeType</p></td>
+<td><p align="left">No</p></td>
+<td><p align="left">ertTriageCd(*)</p></td>
+</tr>
+</table>
+<h1>User Documentation Comments</h1>
+<p> </p>
+<p>The following comments provide additional information regarding the table. 
+These comments are meant to provide knowledge base of information gained through 
+experience using the DW. The comments are maintained by the DW Support Team and collected 
+over time from users of the DW as well as the DW Support Team as information is gathered.
+</p>
+<p> </p>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="10%">
+<p align="center">Created On</p></td>
+<td class="Header" width="10%">
+<p align="center">Updated On</p></td> 
+<td class="Header">
+<p align="center">Comment</p></td> 
+</tr>
+</table>
+</body></html>
